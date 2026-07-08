@@ -6,7 +6,7 @@ Sistema de Controle de Estoque desenvolvido em Laravel 11 com PHP 8.2.
 
 ## Objetivo
 
-Evoluir continuamente o sistema, mantendo uma arquitetura limpa, organizada e preparada para integração com IA.
+Manter uma arquitetura limpa, organizada e preparada para utilização de IA como apoio ao desenvolvimento.
 
 ## Regras Obrigatórias
 
@@ -32,18 +32,6 @@ Evoluir continuamente o sistema, mantendo uma arquitetura limpa, organizada e pr
 - Logs
 - Acessibilidade
 - VLibras
-
-## Próximas evoluções
-
-- Dashboard Executivo
-- Integração com IA Gemini
-- Assistente Inteligente
-- Exportação em PDF
-- Exportação em Excel
-- Auditoria
-- Permissões avançadas
-- API REST
-- Aplicativo Mobile
 
 ## Tecnologias
 
