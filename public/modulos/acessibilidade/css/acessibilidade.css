@@ -1,0 +1,80 @@
+:root {
+    --a11y-font-size: 100%;
+}
+
+html {
+    font-size: var(--a11y-font-size) !important;
+}
+
+.a11y-bar {
+    position: fixed !important;
+    right: 15px !important;
+    bottom: 15px !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+    background: #111 !important;
+    padding: 8px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 10px #0008 !important;
+}
+
+.a11y-bar button {
+    border: 0 !important;
+    padding: 7px 10px !important;
+    border-radius: 6px !important;
+    background: #fff !important;
+    color: #111 !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
+
+body.a11y-dark,
+body.a11y-dark .bg-light {
+    background: #121212 !important;
+    color: #f1f1f1 !important;
+}
+
+body.a11y-dark .container,
+body.a11y-dark .card,
+body.a11y-dark .table,
+body.a11y-dark table,
+body.a11y-dark form,
+body.a11y-dark .alert,
+body.a11y-dark .modal-content {
+    background: #1f1f1f !important;
+    color: #f1f1f1 !important;
+}
+
+body.a11y-dark input,
+body.a11y-dark select,
+body.a11y-dark textarea,
+body.a11y-dark .form-control {
+    background: #2b2b2b !important;
+    color: #fff !important;
+    border-color: #777 !important;
+}
+
+body.a11y-dark th,
+body.a11y-dark td {
+    background: #1f1f1f !important;
+    color: #fff !important;
+    border-color: #555 !important;
+}
+
+body.a11y-dark a {
+    color: #8ab4ff !important;
+}
+
+body.a11y-contrast,
+body.a11y-contrast * {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+body.a11y-contrast a,
+body.a11y-contrast button {
+    color: #ffcc00 !important;
+}

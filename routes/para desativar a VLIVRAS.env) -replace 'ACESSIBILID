@@ -1,0 +1,1 @@
+(Get-Content .env) -replace 'ACESSIBILIDADE_ATIVA=true', 'ACESSIBILIDADE_ATIVA=false' | Set-Content .env

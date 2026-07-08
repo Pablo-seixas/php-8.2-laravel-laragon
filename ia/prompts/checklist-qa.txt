@@ -1,0 +1,14 @@
+Crie um checklist de QA para este sistema Laravel de controle de estoque.
+
+Inclua testes de:
+- login
+- produtos
+- categorias
+- entradas
+- saídas
+- relatórios
+- usuários
+- logs
+- permissões
+- validações
+- segurança

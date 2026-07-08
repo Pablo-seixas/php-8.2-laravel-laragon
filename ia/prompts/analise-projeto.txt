@@ -1,0 +1,14 @@
+Analise este projeto Laravel como um analista de sistemas.
+
+Explique:
+1. Arquitetura MVC
+2. Rotas
+3. Controllers
+4. Models
+5. Views
+6. Banco de dados
+7. Pontos fortes
+8. Pontos fracos
+9. Melhorias futuras
+
+Não invente funcionalidades.
