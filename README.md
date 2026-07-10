@@ -1,65 +1,221 @@
-# Sistema de Controle de Estoque - Laravel
+# Sistema de Controle de Estoque - Laravel 11
 
-## Objetivo
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Pablo-seixas/php-8.2-laravel-laragon/main/Screenshots/Captura%20de%20tela%202026-06-30%20150440.png" alt="Sistema de Controle de Estoque" width="900">
+</p>
 
-Este projeto � um sistema simples de controle de estoque feito com Laravel.
-Ele permite cadastrar, listar, editar, excluir e consultar produtos.
+<p align="center">
 
-O sistema foi pensado para materiais como:
+![Laravel](https://img.shields.io/badge/Laravel-11-red)
+![PHP](https://img.shields.io/badge/PHP-8.2-blue)
+![SQLite](https://img.shields.io/badge/SQLite-3-green)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple)
+![License](https://img.shields.io/badge/license-MIT-brightgreen)
 
-- Material de limpeza
-- Material tecnol�gico
-- Material de escrit�rio
-- Outros materiais
+</p>
 
 ---
 
-## Tecnologias utilizadas
+# Sistema de Controle de Estoque
 
-- PHP
-- Laravel
+Sistema desenvolvido em **Laravel 11** com foco no gerenciamento de materiais e controle de estoque, utilizando arquitetura MVC e boas práticas de desenvolvimento.
+
+O projeto foi criado para servir como base para ambientes corporativos, permitindo o gerenciamento de produtos, entradas, saídas, relatórios, usuários, logs e recursos administrativos.
+
+---
+
+# Objetivo
+
+Disponibilizar uma aplicação simples, organizada e escalável para controle de estoque, permitindo o gerenciamento de diversos tipos de materiais, como:
+
+- Material de informática
+- Material de limpeza
+- Material de escritório
+- Equipamentos
+- Periféricos
+- Ferramentas
+- Demais itens patrimoniais
+
+---
+
+# Funcionalidades
+
+Atualmente o sistema possui:
+
+- Cadastro de produtos
+- Cadastro de categorias
+- Controle de entradas
+- Controle de saídas
+- Controle automático de estoque
+- Estoque mínimo com alerta visual
+- Dashboard administrativo
+- Relatórios
+- Extrato de movimentações
+- Controle de usuários
+- Controle de permissões
+- Alteração de senha
+- Registro de Logs
+- Central Analítica
+- Módulo de Backup
+- Organização automática dos backups por Ano → Mês → Semana
+- Download dos backups
+- Política de retenção dos backups
+
+---
+
+# Tecnologias Utilizadas
+
+- PHP 8.2
+- Laravel 11
+- SQLite
 - MySQL
 - Blade
 - Bootstrap 5
+- Eloquent ORM
 - Laragon
+- Git
+- GitHub
 
 ---
 
-## Banco de dados
+# Arquitetura
 
-No arquivo .env configure:
+O projeto utiliza a arquitetura MVC do Laravel:
 
-DB_DATABASE=estoque_laravel
-DB_USERNAME=root
-DB_PASSWORD=
-
----
-
-## Comandos principais
-
-Criar tabelas e categorias:
-
-php artisan migrate --seed
-
-Rodar o projeto:
-
-php artisan serve
-
-Abrir no navegador:
-
-http://127.0.0.1:8000
-
----
-
-## Resumo
-
-Sistema de controle de estoque desenvolvido em Laravel utilizando:
-
-- MVC
+- Controllers
+- Models
+- Services
+- Middleware
 - Migrations
 - Seeders
-- Relacionamentos Eloquent
-- Blade
-- Bootstrap
+- Blade Templates
 
-Possui cadastro de categorias e produtos, controle de estoque m�nimo e indica��o visual de estoque baixo.
+---
+
+# Banco de Dados
+
+Banco principal do sistema:
+
+```env
+DB_CONNECTION=sqlite
+```
+
+O módulo de Backup utiliza um banco MySQL independente:
+
+```env
+BACKUP_DB_HOST=127.0.0.1
+BACKUP_DB_PORT=3306
+BACKUP_DB_DATABASE=backup_laravel
+BACKUP_DB_USERNAME=root
+BACKUP_DB_PASSWORD=
+```
+
+---
+
+# Instalação
+
+Clone o projeto:
+
+```bash
+git clone https://github.com/Pablo-seixas/php-8.2-laravel-laragon.git
+```
+
+Entre na pasta:
+
+```bash
+cd php-8.2-laravel-laragon
+```
+
+Instale as dependências:
+
+```bash
+composer install
+```
+
+Configure o arquivo `.env`.
+
+Execute as migrations:
+
+```bash
+php artisan migrate --seed
+```
+
+Inicie o servidor:
+
+```bash
+php artisan serve
+```
+
+Acesse:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+# Recursos Administrativos
+
+O sistema possui uma área exclusiva para administradores contendo:
+
+- Gestão de usuários
+- Categorias
+- Logs do sistema
+- Backup
+- Dashboard
+- Central Analítica
+
+---
+
+# Estrutura do Projeto
+
+```
+app/
+ ├── Http/
+ ├── Models/
+ ├── Services/
+ ├── Middleware/
+
+database/
+ ├── migrations/
+ ├── seeders/
+
+resources/
+ ├── views/
+
+routes/
+ ├── web.php
+```
+
+---
+
+# Funcionalidades em Desenvolvimento
+
+Planejadas para as próximas versões:
+
+- Backup automático utilizando mysqldump
+- Compactação em ZIP
+- Restauração de Backup
+- Dashboard Analítico Avançado
+- Machine Learning para previsão de consumo
+- Previsão de ruptura de estoque
+- Indicadores inteligentes
+- Exportação para PDF
+- Exportação para Excel
+- API REST
+- Auditoria completa
+
+---
+
+# Licença
+
+
+---
+
+# Autor
+
+**Pablo Seixas**
+
+GitHub:
+
+https://github.com/Pablo-seixas
