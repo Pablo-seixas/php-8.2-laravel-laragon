@@ -1,9 +1,18 @@
 # Sistema de Controle de Estoque - Laravel 11
 
+# Sistema de Controle de Estoque - Laravel
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Pablo-seixas/php-8.2-laravel-laragon/main/Screenshots/Captura%20de%20tela%202026-06-30%20150440.png" alt="Sistema de Controle de Estoque" width="900">
+  <img src="https://github.com/Pablo-seixas/php-8.2-laravel-laragon/blob/main/Screenshots/libraM.png?raw=true" alt="Dashboard do Sistema" width="900">
 </p>
 
+<p align="center">
+  <img src="https://github.com/Pablo-seixas/php-8.2-laravel-laragon/blob/main/Screenshots/grafico%20.png?raw=true" alt="Gráficos Analíticos" width="900">
+</p>
+
+## Objetivo
+
+...
 <p align="center">
 
 ![Laravel](https://img.shields.io/badge/Laravel-11-red)
