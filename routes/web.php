@@ -3,23 +3,23 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AcessoController;
 use App\Http\Controllers\AnaliticoController;
+use App\Http\Controllers\BackupController;
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EntradaController;
+use App\Http\Controllers\ExtratoController;
+use App\Http\Controllers\LogController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\RelatorioController;
 use App\Http\Controllers\RelatorioPainelController;
 use App\Http\Controllers\SaidaController;
-use App\Http\Controllers\EntradaController;
-use App\Http\Controllers\ExtratoController;
 use App\Http\Controllers\UsuarioController;
-use App\Http\Controllers\LogController;
-use App\Http\Controllers\CategoriaController;
 
 Route::get('/', [AcessoController::class, 'index'])->name('login');
 Route::post('/acesso', [AcessoController::class, 'entrar'])->name('acesso.entrar');
 Route::get('/sair', [AcessoController::class, 'sair'])->name('sair');
 
 Route::middleware(['acesso', 'nocache'])->group(function () {
-
     Route::get('/trocar-senha', [AcessoController::class, 'editarSenha'])->name('senha.editar');
     Route::post('/trocar-senha', [AcessoController::class, 'atualizarSenha'])->name('senha.atualizar');
 
@@ -59,5 +59,11 @@ Route::middleware(['acesso', 'nocache'])->group(function () {
         Route::get('/categorias', [CategoriaController::class, 'index'])->name('categorias.index');
         Route::post('/categorias', [CategoriaController::class, 'store'])->name('categorias.store');
         Route::delete('/categorias/{categoria}', [CategoriaController::class, 'destroy'])->name('categorias.destroy');
+
+        Route::get('/backups', [BackupController::class, 'index'])->name('backups.index');
+        Route::post('/backups/retencao', [BackupController::class, 'atualizarRetencao'])->name('backups.retencao');
+        Route::post('/backups/gerar', [BackupController::class, 'gerar'])->name('backups.gerar');
+        Route::get('/backups/{backup}/baixar', [BackupController::class, 'baixar'])->name('backups.baixar');
+        Route::delete('/backups/{backup}', [BackupController::class, 'destruir'])->name('backups.destruir');
     });
 });
