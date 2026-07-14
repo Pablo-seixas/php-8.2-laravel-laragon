@@ -14,6 +14,7 @@ use App\Http\Controllers\RelatorioController;
 use App\Http\Controllers\RelatorioPainelController;
 use App\Http\Controllers\SaidaController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\MachineLearningController;
 
 Route::get('/', [AcessoController::class, 'index'])->name('login');
 Route::post('/acesso', [AcessoController::class, 'entrar'])->name('acesso.entrar');
@@ -59,6 +60,17 @@ Route::middleware(['acesso', 'nocache'])->group(function () {
         Route::get('/categorias', [CategoriaController::class, 'index'])->name('categorias.index');
         Route::post('/categorias', [CategoriaController::class, 'store'])->name('categorias.store');
         Route::delete('/categorias/{categoria}', [CategoriaController::class, 'destroy'])->name('categorias.destroy');
+        Route::get('/machine-learning', [MachineLearningController::class, 'index'])
+            ->name('ml.index');
+
+        Route::post('/machine-learning/treinar', [MachineLearningController::class, 'treinar'])
+            ->name('ml.treinar');
+
+        Route::get('/machine-learning/baixar/{arquivo}', [MachineLearningController::class, 'baixar'])
+            ->where('arquivo', '[A-Za-z0-9._-]+')
+            ->name('ml.baixar');
+
+
 
         Route::get('/backups', [BackupController::class, 'index'])->name('backups.index');
         Route::post('/backups/retencao', [BackupController::class, 'atualizarRetencao'])->name('backups.retencao');
