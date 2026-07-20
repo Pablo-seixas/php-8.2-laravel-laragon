@@ -2,7 +2,7 @@
 
 ## Instalação
 
-```bash
+`'`bash
 npm install -g @google/gemini-cli
 ```
 
